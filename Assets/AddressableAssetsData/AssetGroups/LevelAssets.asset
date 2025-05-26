@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LevelAssets
+  m_EditorClassIdentifier: 
+  m_GroupName: LevelAssets
+  m_GUID: 5d7190037e3071b43a2640b61721183e
+  m_SerializeEntries:
+  - m_GUID: 29830ac2263a0b24abdf9ebf83e5a155
+    m_Address: Terrain
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c5515e798148e74d84fd28db331d58e
+    m_Address: Rover
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8a0ca9cf9bbe5b7498e72969c3899da8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c3bb6dc9e49b35e4ea1cc624fd9e6505, type: 2}
+    - {fileID: 11400000, guid: 0003ce9be286345498b65692552c76bd, type: 2}
