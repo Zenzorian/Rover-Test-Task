@@ -93,7 +93,7 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
             ""id"": ""47ab8a32-04ae-4f6a-82e0-0bff67ef05a3"",
             ""actions"": [
                 {
-                    ""name"": ""LeftFrontKey"",
+                    ""name"": ""ForwardKey"",
                     ""type"": ""Button"",
                     ""id"": ""47ec79ec-f059-448f-8fc1-6f635cc7cfed"",
                     ""expectedControlType"": """",
@@ -102,7 +102,7 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""LeftBackKey"",
+                    ""name"": ""BackwardKey"",
                     ""type"": ""Button"",
                     ""id"": ""03b83956-e3ca-4277-90e4-9f771b942fbf"",
                     ""expectedControlType"": """",
@@ -111,7 +111,7 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RightFrontKey"",
+                    ""name"": ""RightKey"",
                     ""type"": ""Button"",
                     ""id"": ""44a4a83a-4fe7-4b1d-8f4f-843ff709e747"",
                     ""expectedControlType"": """",
@@ -120,7 +120,7 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RightBackKey"",
+                    ""name"": ""LeftKey"",
                     ""type"": ""Button"",
                     ""id"": ""66518414-a144-453c-b9b2-de3fe9d5393d"",
                     ""expectedControlType"": """",
@@ -137,7 +137,18 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""LeftFrontKey"",
+                    ""action"": ""ForwardKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11012a63-f862-40fd-8b2d-e93d7277a2ec"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ForwardKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -148,29 +159,62 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""LeftBackKey"",
+                    ""action"": ""BackwardKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce41c649-ded6-44fb-91bd-d7e34c418119"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BackwardKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7b10acf-bafa-4a31-9265-991951381bda"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""41438ad9-219d-4724-bed2-bcc50eb4ef90"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""RightBackKey"",
+                    ""action"": ""LeftKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d027e05f-87e2-4f5f-a173-f7ca44fcff11"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""a912a2ee-5830-4f0c-a559-5dab7fa3ed1f"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""RightFrontKey"",
+                    ""action"": ""RightKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -181,10 +225,10 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
 }");
         // Keyboard Control
         m_KeyboardControl = asset.FindActionMap("Keyboard Control", throwIfNotFound: true);
-        m_KeyboardControl_LeftFrontKey = m_KeyboardControl.FindAction("LeftFrontKey", throwIfNotFound: true);
-        m_KeyboardControl_LeftBackKey = m_KeyboardControl.FindAction("LeftBackKey", throwIfNotFound: true);
-        m_KeyboardControl_RightFrontKey = m_KeyboardControl.FindAction("RightFrontKey", throwIfNotFound: true);
-        m_KeyboardControl_RightBackKey = m_KeyboardControl.FindAction("RightBackKey", throwIfNotFound: true);
+        m_KeyboardControl_ForwardKey = m_KeyboardControl.FindAction("ForwardKey", throwIfNotFound: true);
+        m_KeyboardControl_BackwardKey = m_KeyboardControl.FindAction("BackwardKey", throwIfNotFound: true);
+        m_KeyboardControl_RightKey = m_KeyboardControl.FindAction("RightKey", throwIfNotFound: true);
+        m_KeyboardControl_LeftKey = m_KeyboardControl.FindAction("LeftKey", throwIfNotFound: true);
     }
 
     ~@KeyboardInput()
@@ -265,10 +309,10 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
     // Keyboard Control
     private readonly InputActionMap m_KeyboardControl;
     private List<IKeyboardControlActions> m_KeyboardControlActionsCallbackInterfaces = new List<IKeyboardControlActions>();
-    private readonly InputAction m_KeyboardControl_LeftFrontKey;
-    private readonly InputAction m_KeyboardControl_LeftBackKey;
-    private readonly InputAction m_KeyboardControl_RightFrontKey;
-    private readonly InputAction m_KeyboardControl_RightBackKey;
+    private readonly InputAction m_KeyboardControl_ForwardKey;
+    private readonly InputAction m_KeyboardControl_BackwardKey;
+    private readonly InputAction m_KeyboardControl_RightKey;
+    private readonly InputAction m_KeyboardControl_LeftKey;
     /// <summary>
     /// Provides access to input actions defined in input action map "Keyboard Control".
     /// </summary>
@@ -281,21 +325,21 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
         /// </summary>
         public KeyboardControlActions(@KeyboardInput wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "KeyboardControl/LeftFrontKey".
+        /// Provides access to the underlying input action "KeyboardControl/ForwardKey".
         /// </summary>
-        public InputAction @LeftFrontKey => m_Wrapper.m_KeyboardControl_LeftFrontKey;
+        public InputAction @ForwardKey => m_Wrapper.m_KeyboardControl_ForwardKey;
         /// <summary>
-        /// Provides access to the underlying input action "KeyboardControl/LeftBackKey".
+        /// Provides access to the underlying input action "KeyboardControl/BackwardKey".
         /// </summary>
-        public InputAction @LeftBackKey => m_Wrapper.m_KeyboardControl_LeftBackKey;
+        public InputAction @BackwardKey => m_Wrapper.m_KeyboardControl_BackwardKey;
         /// <summary>
-        /// Provides access to the underlying input action "KeyboardControl/RightFrontKey".
+        /// Provides access to the underlying input action "KeyboardControl/RightKey".
         /// </summary>
-        public InputAction @RightFrontKey => m_Wrapper.m_KeyboardControl_RightFrontKey;
+        public InputAction @RightKey => m_Wrapper.m_KeyboardControl_RightKey;
         /// <summary>
-        /// Provides access to the underlying input action "KeyboardControl/RightBackKey".
+        /// Provides access to the underlying input action "KeyboardControl/LeftKey".
         /// </summary>
-        public InputAction @RightBackKey => m_Wrapper.m_KeyboardControl_RightBackKey;
+        public InputAction @LeftKey => m_Wrapper.m_KeyboardControl_LeftKey;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -322,18 +366,18 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_KeyboardControlActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_KeyboardControlActionsCallbackInterfaces.Add(instance);
-            @LeftFrontKey.started += instance.OnLeftFrontKey;
-            @LeftFrontKey.performed += instance.OnLeftFrontKey;
-            @LeftFrontKey.canceled += instance.OnLeftFrontKey;
-            @LeftBackKey.started += instance.OnLeftBackKey;
-            @LeftBackKey.performed += instance.OnLeftBackKey;
-            @LeftBackKey.canceled += instance.OnLeftBackKey;
-            @RightFrontKey.started += instance.OnRightFrontKey;
-            @RightFrontKey.performed += instance.OnRightFrontKey;
-            @RightFrontKey.canceled += instance.OnRightFrontKey;
-            @RightBackKey.started += instance.OnRightBackKey;
-            @RightBackKey.performed += instance.OnRightBackKey;
-            @RightBackKey.canceled += instance.OnRightBackKey;
+            @ForwardKey.started += instance.OnForwardKey;
+            @ForwardKey.performed += instance.OnForwardKey;
+            @ForwardKey.canceled += instance.OnForwardKey;
+            @BackwardKey.started += instance.OnBackwardKey;
+            @BackwardKey.performed += instance.OnBackwardKey;
+            @BackwardKey.canceled += instance.OnBackwardKey;
+            @RightKey.started += instance.OnRightKey;
+            @RightKey.performed += instance.OnRightKey;
+            @RightKey.canceled += instance.OnRightKey;
+            @LeftKey.started += instance.OnLeftKey;
+            @LeftKey.performed += instance.OnLeftKey;
+            @LeftKey.canceled += instance.OnLeftKey;
         }
 
         /// <summary>
@@ -345,18 +389,18 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
         /// <seealso cref="KeyboardControlActions" />
         private void UnregisterCallbacks(IKeyboardControlActions instance)
         {
-            @LeftFrontKey.started -= instance.OnLeftFrontKey;
-            @LeftFrontKey.performed -= instance.OnLeftFrontKey;
-            @LeftFrontKey.canceled -= instance.OnLeftFrontKey;
-            @LeftBackKey.started -= instance.OnLeftBackKey;
-            @LeftBackKey.performed -= instance.OnLeftBackKey;
-            @LeftBackKey.canceled -= instance.OnLeftBackKey;
-            @RightFrontKey.started -= instance.OnRightFrontKey;
-            @RightFrontKey.performed -= instance.OnRightFrontKey;
-            @RightFrontKey.canceled -= instance.OnRightFrontKey;
-            @RightBackKey.started -= instance.OnRightBackKey;
-            @RightBackKey.performed -= instance.OnRightBackKey;
-            @RightBackKey.canceled -= instance.OnRightBackKey;
+            @ForwardKey.started -= instance.OnForwardKey;
+            @ForwardKey.performed -= instance.OnForwardKey;
+            @ForwardKey.canceled -= instance.OnForwardKey;
+            @BackwardKey.started -= instance.OnBackwardKey;
+            @BackwardKey.performed -= instance.OnBackwardKey;
+            @BackwardKey.canceled -= instance.OnBackwardKey;
+            @RightKey.started -= instance.OnRightKey;
+            @RightKey.performed -= instance.OnRightKey;
+            @RightKey.canceled -= instance.OnRightKey;
+            @LeftKey.started -= instance.OnLeftKey;
+            @LeftKey.performed -= instance.OnLeftKey;
+            @LeftKey.canceled -= instance.OnLeftKey;
         }
 
         /// <summary>
@@ -398,32 +442,32 @@ public partial class @KeyboardInput: IInputActionCollection2, IDisposable
     public interface IKeyboardControlActions
     {
         /// <summary>
-        /// Method invoked when associated input action "LeftFrontKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "ForwardKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnLeftFrontKey(InputAction.CallbackContext context);
+        void OnForwardKey(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "LeftBackKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "BackwardKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnLeftBackKey(InputAction.CallbackContext context);
+        void OnBackwardKey(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "RightFrontKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "RightKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnRightFrontKey(InputAction.CallbackContext context);
+        void OnRightKey(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "RightBackKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "LeftKey" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnRightBackKey(InputAction.CallbackContext context);
+        void OnLeftKey(InputAction.CallbackContext context);
     }
 }

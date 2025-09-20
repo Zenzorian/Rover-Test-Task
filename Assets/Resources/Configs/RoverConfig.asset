@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994f5cbda74553468fb9181e5effb34, type: 3}
   m_Name: RoverConfig
   m_EditorClassIdentifier: 
-  maxMotorTorque: 500
+  maxMotorTorque: 200
   brakeTorque: 1000
-  rotationSpeed: 10
+  maxSteerAngle: 30

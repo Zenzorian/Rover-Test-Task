@@ -35,9 +35,7 @@ namespace Scripts.Infrastructure
 
             BindInputService();
 
-            BindGameFactoryService();
-
-            BindSliderHandlerService();              
+            BindGameFactoryService();                 
         }
         
         private void BindCoroutineRunner()
@@ -112,15 +110,7 @@ namespace Scripts.Infrastructure
                 .BindInterfacesAndSelfTo<GameFactoryService>()
                 .AsSingle()
                 .NonLazy();
-        } 
-
-        private void BindSliderHandlerService()
-        {
-            Container
-                .BindInterfacesAndSelfTo<SliderHandlerService>()
-                .AsSingle()
-                .NonLazy();
-        } 
+        }       
         
         private void CreateGameStateMachine()
         {           

@@ -15,11 +15,6 @@ MonoBehaviour:
   m_GroupName: LevelAssets
   m_GUID: 5d7190037e3071b43a2640b61721183e
   m_SerializeEntries:
-  - m_GUID: 29830ac2263a0b24abdf9ebf83e5a155
-    m_Address: Terrain
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b367c1d5d6e59b04bb151607d120fa38
     m_Address: Rover
     m_ReadOnly: 0

@@ -43,7 +43,8 @@ namespace Scripts.Services
            
             Vector3 spawnPosition = new Vector3(at.x, at.y + ROVER_Y_OFFSET, at.z);
             GameObject roverObject = await _assets.Instantiate(AssetAddress.RoverPath, spawnPosition);            
-
+            roverObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            
             Rover rover = roverObject.GetComponent<Rover>();
             if (rover == null)
             {

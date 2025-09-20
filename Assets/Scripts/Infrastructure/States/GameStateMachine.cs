@@ -30,8 +30,7 @@ namespace Scripts.Infrastructure.States
                 (
                     this,
                     diContainer.Resolve<ISceneLoaderService>(),
-                    diContainer.Resolve<IGameFactoryService>(),
-                    diContainer.Resolve<ISliderHandlerService>()
+                    diContainer.Resolve<IGameFactoryService>()
                 ),
                 [typeof(GameLoopState)] = new GameLoopState
                 (

@@ -17,11 +17,13 @@ namespace Scripts.Services
 
         public override void Update()
         {
-            float leftValue = _keyboardActions.LeftFrontKey.IsPressed() ? 1f : _keyboardActions.LeftBackKey.IsPressed() ? -1f : 0f;
-            UpdateLeftStickValue(new Vector2(0f, leftValue));          
+            // W/S - газ/тормоз (LeftStickValue.y для движения вперед/назад)
+            float motorValue = _keyboardActions.ForwardKey.IsPressed() ? 1f : _keyboardActions.BackwardKey.IsPressed() ? -1f : 0f;
+            UpdateLeftStickValue(new Vector2(0f, motorValue));          
 
-            float rightValue = _keyboardActions.RightFrontKey.IsPressed() ? 1f : _keyboardActions.RightBackKey.IsPressed() ? -1f : 0f;
-            UpdateRightStickValue(new Vector2(0f, rightValue)); 
+            // A/D и стрелки лево/право для поворота (RightStickValue.x для поворота влево/вправо)
+            float steeringValue = _keyboardActions.RightKey.IsPressed() ? 1f : _keyboardActions.LeftKey.IsPressed() ? -1f : 0f;
+            UpdateRightStickValue(new Vector2(steeringValue, 0f)); 
         }
         public override void Disable()
         {

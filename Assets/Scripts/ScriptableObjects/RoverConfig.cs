@@ -7,6 +7,6 @@ namespace Scripts.ScriptableObjects
     {
         public float maxMotorTorque = 500f;       
         public float brakeTorque = 1000f;   
-        public float rotationSpeed = 200f; 
+        public float maxSteerAngle = 30f; // Максимальный угол поворота передних колес
     }
 }
