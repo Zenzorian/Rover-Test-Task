@@ -51,7 +51,7 @@ namespace Scripts.Infrastructure.States
             var hudElements = hud.GetComponent<HudSliders>();
             _sliderHandler.Initialize(hudElements);
             hudElements.menuBatton.onClick.AddListener(() => _stateMachine.Enter<MainMenuState,GameData>(_gameData));
-            await _gameFactory.CreateRover(Vector3.zero, _gameData.roverConfig);                        
+            await _gameFactory.CreateRover(new Vector3(70, 0, 50), _gameData.roverConfig);                        
             
             _sceneLoader.HideLoadingCurtain();
 
